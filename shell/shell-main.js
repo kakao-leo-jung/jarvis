@@ -17,7 +17,7 @@ export default class MainShell extends AbstractShell {
         return await nodeFile(shellPath, 'shell-execs.js', new Signal(NO_EXIT))
       }],
     ], ['EXIT', '종료하기', () => {
-      write(`Helper 를 종료합니다.`)
+      write(`[JARVIS] : 종료합니다.`)
       return new Signal(EXIT)
     }])
     super(commands)

@@ -1,4 +1,7 @@
 #!/bin/bash
 
-#node ~/git/helper/main.js
-node ~/git/helper/shell/shell-main.js
+
+SCRIPT_PATH=$(readlink -f "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+
+node $SCRIPT_DIR/shell/shell-main.js
