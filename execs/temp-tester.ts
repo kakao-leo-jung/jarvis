@@ -1,5 +1,5 @@
-#!/usr/bin/env node
-import {writeln} from "../libs/console.js";
+#!/usr/bin/env npx tsx
+import {writeln} from "../libs/console.ts";
 
 /** 임시실행테스트 */
 

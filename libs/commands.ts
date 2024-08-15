@@ -1,6 +1,6 @@
-import {getDisplayLength, write} from "./console.js";
-import Command from "./command.js";
-import Signal, {NO_EXIT} from "./signal.js";
+import {getDisplayLength, write} from "./console.ts";
+import Command from "./command";
+import Signal, {NO_EXIT} from "./signal.ts";
 
 export default class Commands {
   fileMaxLength = 40

@@ -1,11 +1,11 @@
-#!/usr/bin/env node
-import Shell from "./shell.js";
-import Commands from "../libs/commands.js";
+#!/usr/bin/env npx tsx
+import Shell from "./shell";
+import Commands from "../libs/commands";
 import * as fs from "node:fs";
-import {execsPath} from "../main.js";
+import {execsPath} from "../main.ts";
 import path from "path";
-import Signal, {EXIT, NO_EXIT_PRESERVE_DISPLAY} from "../libs/signal.js";
-import {nodeFile} from "../libs/executor.js";
+import Signal, {EXIT, NO_EXIT_PRESERVE_DISPLAY} from "../libs/signal";
+import {nodeFile} from "../libs/executor";
 
 export default class ExecsShell extends Shell {
 

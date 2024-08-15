@@ -1,6 +1,6 @@
 import path from "path";
 import {spawn} from "child_process";
-import Signal, {NO_EXIT} from "./signal.js";
+import Signal, {NO_EXIT} from "./signal.ts";
 
 export function lessFile(filePath, fileName) {
   return new Promise((resolve, reject) => {

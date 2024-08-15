@@ -1,4 +1,4 @@
-import {clear, write} from "../libs/console.js";
+import {clear, write} from "../libs/console";
 import readline from "readline";
 
 export default class AbstractShell {

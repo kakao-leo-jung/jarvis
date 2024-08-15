@@ -1,11 +1,11 @@
-#!/usr/bin/env node
-import Shell from "./shell.js";
-import Commands from "../libs/commands.js";
+#!/usr/bin/env npx tsx
+import Shell from "./shell";
+import Commands from "../libs/commands";
 import * as fs from "node:fs";
-import {docsPath} from "../main.js";
+import {docsPath} from "../main.ts";
 import path from "path";
-import Signal, {EXIT} from "../libs/signal.js";
-import {lessFile} from "../libs/executor.js";
+import Signal, {EXIT} from "../libs/signal";
+import {lessFile} from "../libs/executor";
 
 export default class DocsShell extends Shell {
 
