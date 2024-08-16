@@ -1,0 +1,13 @@
+{
+  "name": "helper",
+  "version": "1.0.0",
+  "description": "helper for developing kakao billing system",
+  "main": "main.js",
+  "type": "module",
+  "repository": "https://github.daumkakao.com/leo-jung/helper.git",
+  "author": "leo.jung <leo.jung@kakaocorp.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
