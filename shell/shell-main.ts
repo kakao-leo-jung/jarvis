@@ -17,7 +17,7 @@ export default class MainShell extends AbstractShell {
         return await nodeFile(shellPath, 'shell-execs.ts', new Signal(NO_EXIT))
       }],
       ['GPT', 'GPT 질문하기', async () => {
-        return await nodeFile(shellPath, 'shell-gpt.ts', new Signal(NO_EXIT))
+        return await nodeFile(shellPath, 'shell-gpt.ts', new Signal(NO_EXIT_PRESERVE_DISPLAY))
       }],
     ], ['EXIT', '종료하기', () => {
       write(`[JARVIS] : 종료합니다.`)

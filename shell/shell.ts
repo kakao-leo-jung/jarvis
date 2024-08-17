@@ -49,12 +49,14 @@ export default class AbstractShell {
     }
   }
 
-  printShell(clearDisplay = true) {
+  printShell(clearDisplay = true, printTitle = true) {
     if (clearDisplay) {
       clear()
     }
-    this.printTitle()
-    this.commands.print()
+    if (printTitle) {
+      this.printTitle()
+      this.commands.print()
+    }
     write(`[JARVIS] : ${this.guideMessage}\n`)
   }
 

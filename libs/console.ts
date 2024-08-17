@@ -2,7 +2,7 @@ export function write(content) {
   process.stdout.write(content);
 }
 
-export function writeln(content) {
+export function writeln(content = '') {
   process.stdout.write(`${content}\n`);
 }
 
