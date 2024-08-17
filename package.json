@@ -8,6 +8,7 @@
   "author": "devjk <rmsghk4254@naver.com>",
   "license": "MIT",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.26.1",
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
