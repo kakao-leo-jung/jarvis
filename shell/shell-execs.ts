@@ -1,5 +1,5 @@
 #!/usr/bin/env npx tsx
-import Shell from "./shell";
+import AbstractShell from "./shell";
 import Commands from "../libs/commands";
 import * as fs from "node:fs";
 import {execsPath} from "../main.ts";
@@ -7,7 +7,7 @@ import path from "path";
 import Signal, {EXIT, NO_EXIT_PRESERVE_DISPLAY} from "../libs/signal";
 import {nodeFile} from "../libs/executor";
 
-export default class ExecsShell extends Shell {
+export default class ExecsShell extends AbstractShell {
 
   constructor() {
     const arr = []

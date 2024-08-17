@@ -4,8 +4,9 @@ export const NO_EXIT_PRESERVE_DISPLAY = 2
 
 export default class Signal {
   message = ''
+  signal = EXIT
 
-  constructor(signal, message) {
+  constructor(signal, message = this.message) {
     this.signal = signal
     if (message) {
       this.message = message

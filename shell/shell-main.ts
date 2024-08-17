@@ -2,7 +2,7 @@
 import AbstractShell from "./shell";
 import Commands from "../libs/commands";
 import {write} from "../libs/console";
-import Signal, {EXIT, NO_EXIT} from "../libs/signal";
+import Signal, {EXIT, NO_EXIT, NO_EXIT_PRESERVE_DISPLAY} from "../libs/signal";
 import {nodeFile} from "../libs/executor";
 import {shellPath} from "../main.ts";
 
@@ -15,6 +15,9 @@ export default class MainShell extends AbstractShell {
       }],
       ['EXECS', '유틸 목록 보기', async () => {
         return await nodeFile(shellPath, 'shell-execs.ts', new Signal(NO_EXIT))
+      }],
+      ['GPT', 'GPT 질문하기', async () => {
+        return await nodeFile(shellPath, 'shell-gpt.ts', new Signal(NO_EXIT))
       }],
     ], ['EXIT', '종료하기', () => {
       write(`[JARVIS] : 종료합니다.`)

@@ -11,7 +11,7 @@ export default class AbstractShell {
   })
   guideMessage = ''
 
-  constructor(commands, description) {
+  constructor(commands, description = this.description) {
     if (new.target === AbstractShell) {
       throw new Error("Cannot instantiate an abstract class.");
     }

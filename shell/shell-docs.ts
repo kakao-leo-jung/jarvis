@@ -1,5 +1,5 @@
 #!/usr/bin/env npx tsx
-import Shell from "./shell";
+import AbstractShell from "./shell";
 import Commands from "../libs/commands";
 import * as fs from "node:fs";
 import {docsPath} from "../main.ts";
@@ -7,7 +7,7 @@ import path from "path";
 import Signal, {EXIT} from "../libs/signal";
 import {lessFile} from "../libs/executor";
 
-export default class DocsShell extends Shell {
+export default class DocsShell extends AbstractShell {
 
   constructor() {
     const arr = []
@@ -16,8 +16,8 @@ export default class DocsShell extends Shell {
       const fullPath = path.join(docsPath, file);
 
       let data = fs.readFileSync(fullPath, "utf-8");
-      data = data.split("\n");
-      data.length = 1;
+      data = data.split("\n")[0];
+      // data.length = 1;
 
       arr.push([file, data[0], async () => {
         return await lessFile(docsPath, file)
